@@ -23,6 +23,8 @@ public class ARLOL extends Application {
         
         Scene scene = new Scene(root);
         
+        scene.getStylesheets().add(FXMLDocumentController.class.getResource("newCascadeStyleSheet.css").toExternalForm());
+        
         stage.setScene(scene);
         stage.show();
     }

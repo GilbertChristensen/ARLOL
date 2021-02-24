@@ -10,26 +10,60 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 /**
  *
  * @author gilbertchristensen
  */
 public class FXMLDocumentController implements Initializable {
-    
+
     @FXML
-    private Label label;
-    
+    private Button Top;
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private Button Jng;
+    @FXML
+    private Button Mid;
+    @FXML
+    private Button Bot;
+    @FXML
+    private Button Sup;
+    @FXML
+    private Button Idc;
+    @FXML
+    private Label Text;
+    
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+
+    @FXML
+    private void pickTop(ActionEvent event) {
+    }
+
+    @FXML
+    private void pickJng(ActionEvent event) {
+    }
+
+    @FXML
+    private void pickMid(ActionEvent event) {
+    }
+
+    @FXML
+    private void pickBot(ActionEvent event) {
+    }
+
+    @FXML
+    private void pickSup(ActionEvent event) {
+    }
+
+    @FXML
+    private void pickIdc(ActionEvent event) {
+    }
+            
 }
