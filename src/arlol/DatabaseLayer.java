@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * Funktion til at koble databasen sammen med programmet.
+ * Class til at koble databasen sammen med programmet.
  */
 
 public class DatabaseLayer {
@@ -53,7 +53,7 @@ public class DatabaseLayer {
     }
  
 /**
- * Funktion til valg af tilfældig  
+ * Funktion til valg af tilfældig Champion. Samme princip som i forrige funktion med undtagelse af ændring i SQL-query. 
  * @return 
  */
     public String championSelectionIDC() {

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package arlol;
 
 import javafx.application.Application;
@@ -12,8 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
- * @author gilbertchristensen
+ * Class til at starte programmet med forskellige restriktioner (opsætning af vindue osv.).
  */
 public class ARLOL extends Application {
     
@@ -25,13 +19,12 @@ public class ARLOL extends Application {
         
         scene.getStylesheets().add(FXMLDocumentController.class.getResource("newCascadeStyleSheet.css").toExternalForm());
         
-        stage.setScene(scene);
+        stage.setScene(scene);        
+        stage.setResizable(false);
         stage.show();
+
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }

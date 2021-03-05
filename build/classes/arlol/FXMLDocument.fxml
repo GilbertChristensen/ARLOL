@@ -8,42 +8,42 @@
 
 <AnchorPane id="AnchorPane" prefHeight="368.0" prefWidth="320" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arlol.FXMLDocumentController">
     <children>
-      <Text layoutX="62.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Random League of Legends" textAlignment="CENTER" wrappingWidth="200.3169708251953">
+      <Text layoutX="97.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Random League of Legends" textAlignment="CENTER" wrappingWidth="131.3169708251953" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="10.0">
          <font>
             <Font name="Times New Roman Bold" size="16.0" />
          </font>
       </Text>
-      <Button fx:id="Top" layoutX="51.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickTop" text="Top">
+      <Button fx:id="Top" layoutX="39.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickTop" text="Top" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="56.0">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="Jng" layoutX="99.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickJng" text="Jng">
+      <Button fx:id="Jng" layoutX="91.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickJng" text="Jng" AnchorPane.leftAnchor="91.0" AnchorPane.topAnchor="56.0">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="Mid" layoutX="142.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickMid" text="Mid">
+      <Button fx:id="Mid" layoutX="138.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickMid" text="Mid" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="140.5" AnchorPane.topAnchor="56.0">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="Bot" layoutX="189.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickBot" prefHeight="25.0" prefWidth="39.0" text="Bot">
+      <Button fx:id="Bot" layoutX="190.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickBot" prefHeight="25.0" prefWidth="39.0" text="Bot" AnchorPane.rightAnchor="91.0" AnchorPane.topAnchor="56.0">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="Sup" layoutX="233.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickSup" text="Sup">
+      <Button fx:id="Sup" layoutX="239.0" layoutY="56.0" mnemonicParsing="false" onAction="#pickSup" text="Sup" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="56.0">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="Idc" layoutX="115.0" layoutY="89.0" mnemonicParsing="false" onAction="#pickIdc" prefHeight="25.0" prefWidth="95.0" text="I don't care">
+      <Button fx:id="Idc" layoutX="111.0" layoutY="89.0" mnemonicParsing="false" onAction="#pickIdc" prefHeight="25.0" prefWidth="95.0" text="I don't care" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="89.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="13.0" />
          </font>
       </Button>
-      <Label fx:id="Text" alignment="CENTER" layoutX="33.0" layoutY="128.0" prefHeight="226.0" prefWidth="255.0" text="Your Selected Champion" textAlignment="CENTER">
+      <Label fx:id="Text" alignment="CENTER" layoutX="31.0" layoutY="128.0" prefHeight="226.0" prefWidth="255.0" text="Your Selected Champion" textAlignment="CENTER" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="128.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="13.0" />
          </font></Label>

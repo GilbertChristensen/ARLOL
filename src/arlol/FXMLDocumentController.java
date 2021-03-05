@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package arlol;
 
 import java.net.URL;
@@ -15,9 +10,9 @@ import javafx.scene.control.Label;
 
 
 /**
- *
- * @author gilbertchristensen
+ * Class med liste over variabler (objekter der bruges), samt sammenkobling af databaselayer (med variablen db).
  */
+
 public class FXMLDocumentController implements Initializable {
 
     @FXML
@@ -37,6 +32,11 @@ public class FXMLDocumentController implements Initializable {
     
     DatabaseLayer db = new DatabaseLayer();
     
+ /**
+ * Funktioner til alle knapper, tekstfelter osv. i FXML-dokumentet.
+ * ActionEvent er et klik på den enkelte knap.
+ * Text.setText(db.championSelection("")) bruges til funktionerne i databaselayer, hvor de tilfældige valg foretages, og derefter ændres label'et.
+ */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }      
@@ -45,7 +45,6 @@ public class FXMLDocumentController implements Initializable {
     private void pickTop(ActionEvent event) {
         
         Text.setText(db.championSelection("Top"));
-    
     }   
         
     @FXML
