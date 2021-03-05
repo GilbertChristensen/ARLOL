@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package arlol;
 
 import java.nio.file.Paths;
@@ -10,22 +5,18 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 
 /**
- *
- * @author gilbertchristensen
+ * Funktion til at koble databasen sammen med programmet.
  */
-
 
 public class DatabaseLayer {
     
     Connection connection = null;
     
-    void connect() {
+    public void connect() {
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite"+Paths
+            connection = DriverManager.getConnection("jdbc:sqlite:"+Paths
                 .get("")
                 .toAbsolutePath()
                 .toString()
@@ -34,24 +25,56 @@ public class DatabaseLayer {
            System.err.println(e.getMessage());
         }
     }
-    
-  public ObservableList championSelection() {
+
+/**
+ * Funktion til at finde en tilfældig Champion i databasen.
+ * @param Lane Det valgte Lane fra den valgte knap i Controllor dokumentet.
+ * @return Funktionen vil give resultatet result1, som vil blive brugt til den valgte knap.
+ */
+    public String championSelection(String Lane) {
+ 
     this.connect();
-    ObservableList championSelection = FXCollections.observableArrayList();
-    String query = "SELECT * FROM League_Table";
+    String query = "SELECT Name, DMGtype, Difficulty, Lanes as \"Lane\" FROM  League_Table JOIN Lanes ON Lanes.id = League_Table.Id WHERE Lanes.Lanes = \"" + Lane + "\" ORDER BY RANDOM() LIMIT 1";
+    String result1 = "";
+    
     try {
         ResultSet result = connection
                 .createStatement()
                 .executeQuery(query);
         while(result.next()) {
-            championSelection.add(result.getString("Name"));
+           result1 = "Your chosen champion is " + result.getString("Name") +
+                   ".\nThis champion has the difficulty " + result.getString("Difficulty") +
+                   ". \nThe champion has the damagetype " + result.getString("DMGtype")+".";
         }
     } catch(SQLException ex) {
         
         }
+    return result1;
+    }
+ 
+/**
+ * Funktion til valg af tilfældig  
+ * @return 
+ */
+    public String championSelectionIDC() {
+ 
+    this.connect();
+    String query = "SELECT Name, DMGtype, Difficulty, Lanes as \"Lane\" FROM  League_Table JOIN Lanes ON Lanes.id = League_Table.Id ORDER BY RANDOM() LIMIT 1";
+    String result2 = "";
     
-        return championSelection;
-    } 
-  
+    try {
+        ResultSet result = connection
+                .createStatement()
+                .executeQuery(query);
+        while(result.next()) {
+           result2 = "Your chosen champion is " + result.getString("Name") +
+                   ".\nThis champion has the difficulty " + result.getString("Difficulty") +
+                   ". \nThe champion has the damagetype " + result.getString("DMGtype")+".";
+        }
+    } catch(SQLException ex) {
+        
+        }
+    return result2;
+    }
+    
 }
-
