@@ -12,7 +12,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 
 /**
  *
@@ -34,18 +36,20 @@ public class FXMLDocumentController implements Initializable {
     private Button Idc;
     @FXML
     private Label Text;
+    @FXML
+    private ListView<String> championThing;
     
-    
+    DatabaseLayer db = new DatabaseLayer();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-
+        this.championThing.setItems(this.db.championSelection());
+    }      
+    
     @FXML
     private void pickTop(ActionEvent event) {
-    }
-
+    }   
+        
     @FXML
     private void pickJng(ActionEvent event) {
     }
@@ -65,5 +69,6 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void pickIdc(ActionEvent event) {
     }
+    
             
 }
